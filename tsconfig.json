@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*":["src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx", 
+    "src/**/*.vue",
+    "./auto-imports.d.ts" ,//unplugin-auto-import自动导入之后会发现引入报错 原因是自动导入的声明文件没加进tsconfig中
+    "./components.d.ts"
+    ] ,
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
